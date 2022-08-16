@@ -6,13 +6,11 @@ const float UPPER_ELBOW_CONTROLL_BEAM_LENGTH = .0869;
 const float LOWER_ELBOW_CONTROLL_BEAM_LENGTH = .08;
 const float M2_DISPLACEMENT = .09;
 
-class State {
-    private:
-    public:
-        float m1 = 0;   // X-axis/shoulder
-        float m2 = 0;   // X-axis/elbow
-        float m3 = 0;   // Y-axis/waist
-        
-        bool reach(float x, float y, float z);
-        bool reach(float x, float y);
+struct State {
+    float m1 = 0;   // X-axis/shoulder
+    float m2 = 0;   // X-axis/elbow
+    float m3 = 0;   // Y-axis/waist
+    
+    bool reach(float x, float y, float z);
+    bool reach(float x, float y);
 };
